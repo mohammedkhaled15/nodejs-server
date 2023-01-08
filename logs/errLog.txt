@@ -1,0 +1,13 @@
+20230102	23:27:42	e319f6c4-9e9d-4013-8d33-80f6da65ee9c	Error: Not allowed by CORS
+20230103	14:26:00	069dd794-97bd-4b7f-a5ef-a1251013a8a7	Error: Not allowed by CORS
+20230103	14:27:24	aabe6225-07a6-45d6-8e31-3013e7f0ab3a	Error: Not allowed by CORS
+20230103	14:47:36	9c5541bc-b2c0-46a3-b1a5-8e3db9fa3bea	Error: Not allowed by CORS
+20230104	01:13:35	c91a1e20-f63d-4411-b142-2c2fe9f027a9	Error: Not allowed by CORS
+20230104	01:55:12	6a574ad9-3fde-4f8d-a147-47a5e8b76ab2	Error: Not allowed by CORS
+20230104	01:57:14	ada7fae4-79c9-4925-97af-4e69ff62488c	ReferenceError: origin is not defined
+20230104	02:05:01	6a863fd9-a80c-4643-8e93-a86c6394b692	Error: Not allowed by CORS
+20230104	02:05:02	c16dc269-597b-41be-93f6-c39fdc2ac446	Error: Not allowed by CORS
+20230104	02:14:56	eb639977-3fae-4886-a63c-3e67bdb0304f	Error: Not allowed by CORS
+20230104	02:15:28	4f73cca2-50fc-49e6-8d11-bfaaf5f63600	Error: Not allowed by CORS
+20230104	19:32:44	5ac4b9fa-ea9d-438a-80d2-2064f8125a24	TypeError: data.employees.filter is not a function
+20230107	14:06:43	2a0b9825-194b-4665-918a-61c457e4a7e1	Error: Cannot set headers after they are sent to the client
