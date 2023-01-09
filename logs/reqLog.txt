@@ -482,3 +482,12 @@
 20230107	21:18:58	959e68ef-95f0-446f-b246-ad1843c2dbd6	DELETE	undefined	/employees
 20230108	13:57:38	15beef9d-7eac-46c2-b370-43f0e2c1e0eb	GET	undefined	/employees
 20230108	13:57:39	10c73946-eb0f-487c-8687-158e99fd4e33	GET	undefined	/favicon.ico
+20230109	20:57:24	f3e63e24-accb-44c5-aa27-8042006b5152	POST	undefined	/register
+20230109	21:02:18	97e0dba9-ba16-4a9c-a9e0-7c448b707b99	POST	undefined	/register
+20230109	21:05:22	ca97abc1-391d-4537-ac71-95a9b94933d5	POST	undefined	/register
+20230109	21:08:05	39cee840-05fb-4bde-8dcc-2892a5cb1fdc	POST	undefined	/register
+20230109	21:09:25	c6e29c51-25fc-441a-ab60-5f49a2fcb4ce	POST	undefined	/register
+20230109	21:10:42	cf141289-dffd-4a6a-95fe-7bb6b81f46cc	POST	undefined	/register
+20230109	21:13:17	7fe2deb0-88eb-4337-8622-128023774519	POST	undefined	/register
+20230109	21:13:27	7411f2c4-7049-44b2-81e6-ac9061507845	POST	undefined	/register
+20230109	21:41:08	7a99bb40-7223-484a-8c01-b87e4515971f	POST	undefined	/auth
