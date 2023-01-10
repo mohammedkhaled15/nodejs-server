@@ -548,3 +548,8 @@
 20230110	21:21:08	84e713c4-86bc-45a3-be00-169d594531a8	GET	undefined	/employees/63bdb375be0516bf81bca826
 20230110	21:21:22	644bb2a5-e8b4-4706-aee8-462451d33805	GET	undefined	/refresh
 20230110	21:21:35	0e4a13aa-963a-4882-9937-ed4163778d63	GET	undefined	/employees/63bdb375be0516bf81bca826
+20230110	22:04:11	c7fd6c07-f0d2-4f00-94bb-063dcb4bbeb2	POST	undefined	/auth
+20230110	22:04:30	3484168c-c6a8-4b74-8e10-a2fb7b7f59c9	GET	undefined	/employees
+20230110	22:04:57	771d7ac3-cbc9-40e1-9060-1bd2bd773d87	PUT	undefined	/employees
+20230110	22:09:28	6b3d7a28-a903-4ed9-9402-784b7624ffda	POST	undefined	/auth
+20230110	22:09:57	80943da9-9414-468f-8316-3bcd143c89a7	DELETE	undefined	/employees
