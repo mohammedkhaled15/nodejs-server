@@ -11,3 +11,14 @@
 20230104	02:15:28	4f73cca2-50fc-49e6-8d11-bfaaf5f63600	Error: Not allowed by CORS
 20230104	19:32:44	5ac4b9fa-ea9d-438a-80d2-2064f8125a24	TypeError: data.employees.filter is not a function
 20230107	14:06:43	2a0b9825-194b-4665-918a-61c457e4a7e1	Error: Cannot set headers after they are sent to the client
+20230110	20:46:30	30f16054-1cb6-4926-bdee-9c7687813153	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+20230110	20:47:53	6f492632-f39b-4490-9813-fa40c7c4464f	TypeError: res.text is not a function
+20230110	20:48:26	c8884d46-2a9e-4298-9aab-5966c2815513	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
