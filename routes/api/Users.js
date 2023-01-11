@@ -5,6 +5,6 @@ const verifyRoles = require("../../middleware/verifyRoles");
 const router = express.Router();
 
 router.route("/").get(verifyRoles(ROLES_LIST.Admin), getAllUsers);
-router.route("/").delete(verifyRoles(ROLES_LIST.Admin), deleteUser);
+router.route("/:id").delete(verifyRoles(ROLES_LIST.Admin), deleteUser);
 
 module.exports = router;

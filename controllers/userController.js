@@ -1,11 +1,11 @@
 const User = require("../model/User");
 
 const deleteUser = async (req, res) => {
-  if (!req?.body?.id)
+  if (!req?.params?.id)
     return res
       .status(400)
-      .json({ message: `the given id: ${req.body.id} not valid` });
-  await User.deleteOne({ _id: req.body.id });
+      .json({ message: `the given id: ${req.params.id} not valid` });
+  await User.deleteOne({ _id: req.params.id });
   res.json({ Users: await User.find() });
 };
 
