@@ -553,3 +553,6 @@
 20230110	22:04:57	771d7ac3-cbc9-40e1-9060-1bd2bd773d87	PUT	undefined	/employees
 20230110	22:09:28	6b3d7a28-a903-4ed9-9402-784b7624ffda	POST	undefined	/auth
 20230110	22:09:57	80943da9-9414-468f-8316-3bcd143c89a7	DELETE	undefined	/employees
+20230111	18:42:11	815d9de1-91c0-485f-ba1c-417e861f5076	POST	undefined	/auth
+20230111	18:42:23	e40994c5-ca36-44bb-90e6-e32810c459b9	GET	undefined	/users
+20230111	18:42:57	793cbfe3-a33e-481c-a18c-1306f2f2b6a7	DELETE	undefined	/users

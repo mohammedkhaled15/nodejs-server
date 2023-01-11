@@ -39,6 +39,7 @@ app.use("/logout", require("./routes/logout"));
 
 app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees"));
+app.use("/users", require("./routes/api/Users"));
 
 app.all("*", (req, res) => {
   if (req.accepts("html")) {
