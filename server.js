@@ -36,6 +36,7 @@ app.use("/register", require("./routes/registerUser"));
 app.use("/auth", require("./routes/auth"));
 app.use("/refresh", require("./routes/refreshToken"));
 app.use("/logout", require("./routes/logout"));
+app.use("/users", require("./routes/api/getAllUsersRouter"));
 
 app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees"));

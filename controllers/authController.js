@@ -1,16 +1,6 @@
-// const usersDb = {
-//   users: require("../model/users.json"),
-//   setUsers: function (data) {
-//     this.users = data;
-//   },
-// };
-
 const User = require("../model/User");
-
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// const fsPromises = require("fs").promises;
-// const path = require("path");
 
 const handleLogin = async (req, res) => {
   const { user, pwd } = req.body;
@@ -18,43 +8,34 @@ const handleLogin = async (req, res) => {
     return res
       .status(400)
       .json({ message: "username and password are required" });
-  // const foundUser = usersDb.users.find((person) => person.username === user);
   const foundUser = await User.findOne({ username: user }).exec();
   console.log(foundUser);
-  if (!foundUser) return res.sendStatus(401); // Unathaurized
+  if (!foundUser)
+    return res.status(404).json({ message: "User Not Found in Database" }); // Unathaurized
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
-    const roles = Object.values(foundUser.roles);
+    const roles = Object.values(foundUser.roles).filter(Boolean);
     //create JWTs
-    const acsessToken = jwt.sign(
+    const accessToken = jwt.sign(
       { userInfo: { username: foundUser.username, roles } },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "1m" }
+      { expiresIn: "5m" }
     );
     const refreshToken = jwt.sign(
       { username: foundUser.username },
       process.env.REFRESH_TOKEN_SECRET,
       { expiresIn: "1d" }
     );
-    // const otherUsers = usersDb.users.filter(
-    //   (person) => person.username !== foundUser.username
-    // );
-    // const currentUser = { ...foundUser, refreshToken };
     await User.updateOne({ username: user }, { refreshToken: refreshToken });
-    // usersDb.setUsers([...otherUsers, currentUser]);
-    // await fsPromises.writeFile(
-    //   path.join(__dirname, "..", "model", "users.json"),
-    //   JSON.stringify(usersDb.users)
-    // );
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
       sameSite: "None",
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
-    res.json({ acsessToken });
+    res.json({ roles, accessToken });
   } else {
-    res.sendStatus(401);
+    res.status(401).json({ message: "Unauthorized Access" });
   }
 };
 

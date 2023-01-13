@@ -22,3 +22,4 @@
     |     property 's' -> object with constructor 'Object'
     |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
     --- property 'client' closes the circle
+20230112	10:41:10	8966d307-05ed-4ba2-9d41-8ffc0f905607	Error: Not allowed by CORS

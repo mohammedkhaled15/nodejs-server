@@ -1,14 +1,4 @@
-// const usersDb = {
-//   users: require("../model/users.json"),
-//   setUsers: function (data) {
-//     this.users = data;
-//   },
-// };
-
 const User = require("../model/User");
-
-// const path = require("path");
-// const fsPromises = require("fs").promises;
 const bcrypt = require("bcrypt");
 
 const handelNewUser = async (req, res) => {
@@ -29,17 +19,6 @@ const handelNewUser = async (req, res) => {
       password: hashPassword,
     });
     console.log(result);
-    // const newUser = {
-    //   username: user,
-    //   roles: { User: 2001 },
-    //   password: hashPassword,
-    // };
-    // usersDb.setUsers([...usersDb.users, newUser]);
-    // await fsPromises.writeFile(
-    //   path.join(__dirname, "..", "model", "users.json"),
-    //   JSON.stringify(usersDb.users)
-    // );
-    // console.log(usersDb.users);
     res.status(201).json({ message: `new user:${user} created! ` });
   } catch (error) {
     res.status(500).json({ message: error.mesage });
