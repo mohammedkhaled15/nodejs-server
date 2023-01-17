@@ -12,7 +12,7 @@ const deleteUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
   const allUsers = await User.find();
   const users = allUsers.map((user) => user.username);
-  res.json({ Users: users });
+  res.json({ users });
 };
 
 module.exports = { deleteUser, getAllUsers };

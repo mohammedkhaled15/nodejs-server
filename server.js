@@ -30,17 +30,18 @@ app.use(cookieParser());
 //serve static pages
 app.use("/", express.static(path.join(__dirname, "/public")));
 
-//routes
+//Public routes
 app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/registerUser"));
 app.use("/auth", require("./routes/auth"));
 app.use("/refresh", require("./routes/refreshToken"));
 app.use("/logout", require("./routes/logout"));
-app.use("/users", require("./routes/api/getAllUsersRouter"));
 
-app.use(verifyJWT);
+// Private Routes
+app.use(verifyJWT); // JWT verfiction middleware
 app.use("/employees", require("./routes/api/employees"));
 app.use("/users", require("./routes/api/Users"));
+app.use("/users", require("./routes/api/getAllUsersRouter"));
 
 app.all("*", (req, res) => {
   if (req.accepts("html")) {
